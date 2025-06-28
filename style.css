@@ -222,18 +222,14 @@ h3 {
   button {
     width: 100%;
     font-size: 16px;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu-item {
-    flex-direction: column;
-  }
-
-  body {
+      body {
     padding: 0 12px;
   }
-
+    
+ body {
+    padding: 0 12px;
+  }
+    s
   .menu-box {
     margin-bottom: 14px;
     padding: 10px;
@@ -244,4 +240,5 @@ h3 {
     padding: 8px 6px;
   }
 }
+
 
