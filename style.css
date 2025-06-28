@@ -224,3 +224,19 @@ h3 {
     font-size: 16px;
   }
 }
+
+@media (max-width: 600px) {
+  .menu-box {
+    margin-bottom: 12px;  /* default misal 20px, ini dikecilin */
+  }
+
+  .menu-item {
+    padding: 8px 10px;  /* padding dalam item juga lebih rapet */
+    gap: 8px;
+  }
+
+  .menu-box h3 {
+    margin-bottom: 8px;  /* judul section-nya lebih rapat ke item */
+  }
+}
+
