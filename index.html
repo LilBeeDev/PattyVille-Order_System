@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PattyVille Order</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="sound-pop" src="sounds/pop.mp3"></audio>
+
+    <div class="logo-container">
+      <img src="images/Logo.png" alt="Pattyville" class="logo" />
+    </div>
+
+    <h1>PattyVille Order System</h1>
+
+    <input type="text" id="nama" placeholder="Name" class="input-text" />
+
+    <h2>Main Course</h2>
+    <div class="main-course">
+      <label class="menu-item">
+        <img src="images/ultra-set-lunch.png" class="menu-img" />
+        <input type="checkbox" value="30000" onchange="updateTotal()" />
+        <span class="menu-name">Ultra Set Lunch</span>
+        <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+
+        <span class="menu-price">Rp35.000</span>
+      </label>
+
+      <label class="menu-item">
+        <img src="images/ultra-loaded.png" class="menu-img" />
+        <input type="checkbox" value="30000" onchange="updateTotal()" />
+        <span class="menu-name">Ultra Loaded</span>
+        <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+        <span class="menu-price">Rp35.000</span>
+      </label>
+
+      <label class="menu-item">
+        <img src="images/regular-set-lunch.png" class="menu-img" />
+        <input type="checkbox" value="30000" onchange="updateTotal()" />
+        <span class="menu-name">Regular Set Lunch</span>
+        <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+        <span class="menu-price">Rp25.000</span>
+      </label>
+
+      <label class="menu-item">
+        <img src="images/regular-loaded.png" class="menu-img" />
+        <input type="checkbox" value="30000" onchange="updateTotal()" />
+        <span class="menu-name">Regular Set Lunch</span>
+        <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+        <span class="menu-price">Rp25.000</span>
+      </label>
+    </div>
+
+    <div class="menu-flex">
+      <div class="menu-box">
+        <h3>Ala Carte</h3>
+
+        <label class="menu-item">
+          <input type="checkbox" value="20000" onchange="updateTotal()" />
+          <span class="menu-name">PattyVille</span>
+          <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+          <span class="menu-price">Rp20.000</span>
+        </label>
+
+        <label class="menu-item">
+          <input type="checkbox" value="10000" onchange="updateTotal()" />
+          <span class="menu-name">Kentang Goyang</span>
+          <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+          <span class="menu-price">Rp10.000</span>
+        </label>
+
+        <label class="menu-item">
+          <input type="checkbox" value="19000" onchange="updateTotal()" />
+          <span class="menu-name">Kentang Goyang x Nugget</span>
+          <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+          <span class="menu-price">Rp19.000</span>
+        </label>
+      </div>
+
+      <div class="menu-box">
+        <h3>Add On</h3>
+
+        <label class="menu-item">
+          <input type="checkbox" value="12000" onchange="updateTotal()" />
+          <span class="menu-name">Beef Patty</span>
+          <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+          <span class="menu-price">Rp12.000</span>
+        </label>
+
+        <label class="menu-item">
+          <input type="checkbox" value="5000" onchange="updateTotal()" />
+          <span class="menu-name">Chesse</span>
+          <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+          <span class="menu-price">Rp5.000</span>
+        </label>
+
+        <label class="menu-item">
+          <input type="checkbox" value="7000" onchange="updateTotal()" />
+          <span class="menu-name">Egg (Omega 3)</span>
+          <input type="number" value="1" min="1" class="qty-input" onchange="updateTotal()" />
+          <span class="menu-price">Rp7.000</span>
+        </label>
+      </div>
+    </div>
+
+    <h3>Total Price:</h3>
+    <h2 id="total">Rp0</h2>
+
+    <button onclick="orderNow()">Order</button>
+    <div id="previewModal" class="modal">
+      <div class="modal-content">
+        <h2>📋 Ringkasan Pesanan</h2>
+        <p id="previewPesanan"></p>
+        <button onclick="kirimWA()">Kirim ke WhatsApp</button>
+        <button onclick="tutupPreview()">Batal</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
